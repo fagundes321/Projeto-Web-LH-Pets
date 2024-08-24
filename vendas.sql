@@ -32,3 +32,15 @@ insert into tblclientes values ('89.012.345/0001-22','Alvorada Empreendimentos S
 
 select * from tblclientes;
 
+-- comandos de segurança
+
+create login aluno with password = qwe12345;
+
+use vendas;
+
+create user usuario_venda flor login aluno;
+
+grant select to usuario_venda;
+grant insert to  usuario_venda;
+
+revoke insert from usuario_venda;
